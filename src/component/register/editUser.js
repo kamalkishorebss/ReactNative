@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {StyleSheet,Text,Image, View,StatusBar,Dimensions,TextInput,TouchableOpacity,ToastAndroid, onButtonPress,Picker} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Login from '../login/Login';
+import Conatct from '../profile/Conatct';
 import firebaseApp from '../firebase';
 import Geocoder from 'react-native-geocoder';
 
@@ -45,7 +46,9 @@ export default class editUser extends Component{
        phone:this.state.phone
     
    }) 
-   alert("hahah")
+
+    ToastAndroid.show('User updated successfully', ToastAndroid.BOTTOM);
+    this.props.navigation.navigate('Conatct');
     
   }
       
